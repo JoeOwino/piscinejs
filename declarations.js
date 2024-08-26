@@ -1,6 +1,6 @@
 const escapeStr = "`\\/\"'"; 
 
-const arr = Object.freeze([4, 2]);
+const arr = Object.freeze([4, '2']);
 
 const obj = Object.freeze({
     str: "How to js",
@@ -10,7 +10,7 @@ const obj = Object.freeze({
 });
 
 const nested = Object.freeze({
-    arr: Object.freeze([4, undefined, 2]), 
+    arr: Object.freeze([4, undefined, '2']), 
     obj: Object.freeze({                   
         str: "How to js",
         num: 42,
