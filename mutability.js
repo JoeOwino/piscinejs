@@ -4,10 +4,10 @@ const person = {
     country: 'US',
   }  
 
-const clone1 = JSON.parse(JSON.stringify(person));
-const clone2 = JSON.parse(JSON.stringify(person));
+const clone1 = {...person};
+const clone2 = Object.assign({}, person)
 
 const samePerson = person;
 
-person.age += 1;        
-person.country = 'FR';  
+person.age += 1;         
+person.country = 'FR';
