@@ -12,7 +12,7 @@ function dogYears(planet, age) {
 
     const SEC_PER_YEAR = 31_557_600;
     const DOG_YEARS = 7
-    const dogAge = age * planetYrs[planet] * DOG_YEARS / SEC_PER_YEAR
+    const dogAge = age / planetYrs[planet] * DOG_YEARS / SEC_PER_YEAR
 
 
     return Math.round(dogAge * 100) / 100
