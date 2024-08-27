@@ -7,16 +7,18 @@ function sentence(arr) {
 }
 
 function yell(str) {
-    return str.toUpperCase()
+    return str.toLocaleUpperCase()
 }
 
 function whisper(str) {
-    return str.toLowerCase()
+    return str.toLocaleLowerCase()
 }
 
 function capitalize(str) {
-    const startCh = str.charAt(0).toUpperCase()
-    const restChrs =str.slice(1).toLowerCase()
+    const startCh = str.charAt(0).toLocaleUpperCase()
+    const restChrs =str.slice(1).toLocaleLowerCase()
 
     return startCh + restChrs
 }
+
+console.log(capitalize('*hELLO'))
