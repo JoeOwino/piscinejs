@@ -20,5 +20,3 @@ function capitalize(str) {
 
     return startCh + restChrs
 }
-
-console.log(capitalize('*hELLO'))
