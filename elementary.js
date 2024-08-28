@@ -9,7 +9,7 @@ function multiply(a, b) {
 
     let result = 0
     while (b > 0) {
-        if (b % 2 === 1) {
+        if (b & 1) {
             result += a
         }
 
