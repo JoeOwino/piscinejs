@@ -43,11 +43,12 @@ function divide(a, b) {
 }
 
 function modulo(a, b) {
-    for (let div = 0; b <= a; div++) {
-        a -= b
+    let prod = b
+    for (;prod <= a; prod += b) {
     }
-    return b - a
+
+    return a - (prod - b)
 }
 
-console.log(divide(10, -2))
+console.log((modulo(34, 78)))
 
