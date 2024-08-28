@@ -13,8 +13,8 @@ function sameSign(a, b) {
         return true
     }
 
-    if (a = 0) {
-        if (b = 0) {
+    if (a > 0) {
+        if (b > 0) {
             return true
         } else {
             return false
