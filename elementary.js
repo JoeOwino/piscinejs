@@ -7,15 +7,17 @@ function multiply(a, b) {
     a = Math.abs(a)
     b = Math.abs(b)
 
-    let prod = a
-    for (let i = 1; i < b; i++) {
-        prod += a
+    let result = 0
+    while (b > 0) {
+        if (b % 2 === 1) {
+            result += a
+        }
+
+        a <<= 1 
+        b >>= 1
     }
 
-    if (isNeg) {
-        return -prod
-    }
-    return prod 
+    return isNeg ? -result : result
 }
 
 function divide(a, b) {
@@ -50,5 +52,5 @@ function modulo(a, b) {
     return a - (prod - b)
 }
 
-console.log((modulo(34, 78)))
+console.log(divide(10, 5))
 
