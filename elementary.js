@@ -3,7 +3,7 @@ function multiply(a, b) {
     for (let i = 1; i < b; i++) {
         prod += a
     }
-    return a
+    return prod
 }
 
 function divide(a, b) {
@@ -21,4 +21,4 @@ function modulo(a, b) {
     return b - a
 }
 
-console.log(modulo(10, 4))
+console.log(multiply(34, 78))
