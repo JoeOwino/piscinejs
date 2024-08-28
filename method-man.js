@@ -11,7 +11,7 @@ function yell(str) {
 }
 
 function whisper(str) {
-    return str.toLocaleLowerCase()
+    return '*' + str.toLocaleLowerCase() + '*'
 }
 
 function capitalize(str) {
@@ -20,3 +20,5 @@ function capitalize(str) {
 
     return startCh + restChrs
 }
+
+console.log(whisper('DÉJÀ VU'))
