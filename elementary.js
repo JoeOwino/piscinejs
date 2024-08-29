@@ -38,19 +38,31 @@ function divide(a, b) {
         a -= b
     }
 
-    if (isNeg) {
-        return -div
-    }
-    return div
+    return isNeg ? -div : div 
 }
 
 function modulo(a, b) {
-    let prod = b
-    for (;prod <= a; prod += b) {
+    if (b === 0) {
+        return Infinity
     }
 
-    return a - (prod - b)
+    if (a === 0) {
+        return 0;
+    }
+
+    let isNeg = a < 0;
+    a = Math.abs(a);
+    b = Math.abs(b);
+
+    let prod = b;
+    while (prod <= a) {
+        prod += b;
+    }
+
+    let result = a - (prod - b);
+    return isNeg ? -result : result;
 }
 
-console.log(modulo(13, 20))
+
+console.log(modulo(100, -45))
 
