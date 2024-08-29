@@ -52,5 +52,5 @@ function modulo(a, b) {
     return a - (prod - b)
 }
 
-console.log(divide(10, 5))
+console.log(modulo(13, 20))
 
