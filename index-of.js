@@ -9,10 +9,12 @@ function indexOf(arr, n, index = 0) {
 }
 
 function lastIndexOf(arr, n, index = 0) {
+    let j = 0
     for (let i = arr.length - 1; i >= 0; i--) {
         if (arr[i] === n) {
-            return i
+            return j
         }
+        j++
     }
 
     return -1
@@ -28,4 +30,4 @@ function includes(arr, n, index) {
     return false
 }
 
-console.log(lastIndexOf([4,2,3,4,5], 4))
+console.log(lastIndexOf(['t', 0, 0, 't'], 't', 2))
