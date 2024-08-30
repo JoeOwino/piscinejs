@@ -11,7 +11,7 @@ function cutFirstLast(str) {
 }
 
 function keepFirst(str) {
-    return str.slice(0, 1)
+    return str.slice(0, 2)
 }
 
 function keepLast(str) {
@@ -22,4 +22,4 @@ function keepFirstLast(str) {
     return str.slice(0, 2) + str.slice(-2)
 }
 
-console.log(keepFirstLast("12345"))
+console.log(keepFirst('abcdef'))
