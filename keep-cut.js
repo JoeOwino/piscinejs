@@ -19,7 +19,16 @@ function keepLast(str) {
 }
 
 function keepFirstLast(str) {
-    return str.slice(0, 2) + str.slice(-2)
+    let result = ''
+
+    for (let i = 0; i < str.length; i++) {
+        if (i > 1 && i < str.length - 2) {
+            continue
+        }
+        result += str[i]
+    }
+
+    return result
 }
 
-console.log(keepFirst('abcdef'))
+console.log(keepFirstLast('af'))
