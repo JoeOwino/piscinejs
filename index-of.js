@@ -8,7 +8,7 @@ function indexOf(arr, n, index = 0) {
     return -1
 }
 
-function lastIndexOf(arr, n, index = 0) {
+function lastIndexOf(arr, n, index = arr.length - 1) {
     for (let i = index; i >= 0; i--) {
         if (arr[i] === n) {
             return i
