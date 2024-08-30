@@ -19,14 +19,13 @@ function lastIndexOf(arr, n, index = arr.length - 1) {
     return -1
 }
 
-function includes(arr, n, index) {
-    let i = index
-    for (; i < arr.length; i ++) {
-        if (arr[i] === n) {
+function includes(arr, n, index = 0) {
+    for (; index < arr.length; index ++) {
+        if (arr[index] === n) {
             return true
         }
     }
     return false
 }
 
-console.log(lastIndexOf(['t', 0, 0, 't'], 't', 2))
+console.log(includes([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
