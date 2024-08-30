@@ -1,53 +1,79 @@
-function modulo(a, b) {
-    if (b === 0) {
-        return Infinity
+function round(int) {
+    let neg = false;
+    if (int < 0) {
+        neg = true;
+        int = -int;
+    }
+    let counter = 0;
+    while (!(int < 1 && int > -1)) {
+        int -= 1;
+        counter++;
+    }
+    if (int < 0.5) {
+        if (neg) {
+            return -counter;
+        } else {
+            return counter;
+        }
+    } else {
+        if (neg) {
+            return -counter - 1;
+        } else {
+            return counter + 1;
+        }
+    }
+}
+
+function floor(int) {
+    let neg = false;
+    if (int < 0) {
+        neg = true;
+        int = -int;
+    }
+    let intCopy = int;
+    let counter = 0;
+    while (!(intCopy < 1 && intCopy > -1)) {
+        intCopy -= 1;
+        counter++;
     }
 
-    if (a === 0) {
-        return 0;
+    return neg ?  -counter - 1 :counter
+    
+}
+
+function ceil(int) {
+    if (!int) return 0;
+    let neg = false;
+    if (int < 0) {
+        neg = true;
+        int = -int;
+    }
+    let intCopy = int;
+    let counter = 0;
+    while (!(intCopy < 1 && intCopy >= 0)) {
+        intCopy -= 1;
+        counter++;
     }
 
-    let isNeg = a < 0;
-    a = Math.abs(a);
-    b = Math.abs(b);
+    return neg ? -counter : counter +1
+}
 
-    let prod = b;
-    while (prod <= a) {
-        prod += b;
+function trunc(int) {
+    let counter = 0;
+    if (int > 0xfffffffff) {
+        int -= 0xfffffffff;
+        counter += 0xfffffffff;
     }
-
-    let result = a - (prod - b);
-    return isNeg ? -result : result;
+    let neg = false;
+    if (int < 0) {
+        neg = true;
+        int = -int;
+    }
+    let intCopy = int;
+    while (!(intCopy < 1 && intCopy > -1)) {
+        intCopy -= 1;
+        counter++;
+    }
+    
+    return neg ? -counter : counter
 }
-
-function round(n) {
-    let nDec = modulo(n, 1)
-    let nWhole = n - nDec
-
-    let isCeil = nDec > 0.5
-    return isCeil ? nWhole + 1 : nWhole
-}
-
-function ceil(n) {
-    let nDec = modulo(n, 1)
-    let nWhole = n - nDec
-
-    let isCeil = nDec > 0
-    return isCeil ? nWhole + 1 : nWhole
-}
-
-function floor(n) {
-    let nDec = modulo(n, 1)
-    let nWhole = n - nDec
-
-    return nWhole
-}
-
-function trunc(n) {
-    let nDec = modulo(n, 1)
-    let nWhole = n - nDec
-
-    return nWhole
-}
-
-console.log(round(2.04))
