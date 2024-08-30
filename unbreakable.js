@@ -2,7 +2,6 @@ function split(str, sep) {
     if (sep === null) {
         sep = ','
     }
-
     let result = []
     if (sep === '') {
         for (let i = 0; i < str.length; i++) {
@@ -20,17 +19,18 @@ function split(str, sep) {
         result.push(str.slice(0, end))
         str = str.slice(end + sep.length)
     }
-
-    return result.push(str)
+    result.push(str)
+    return result
 }
 
 function join(arr, sep) {
     if (sep === null) {
         sep = ','
     }
-    var result = arr[0].toString()
-    for (var i = 1; i < arr.length; i++) {
+    let result = arr[0].toString();
+    for (let i = 1; i < arr.length; i++) {
         result += sep + arr[i]
     }
     return result
 }
+
