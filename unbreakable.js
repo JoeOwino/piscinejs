@@ -1,10 +1,10 @@
-function split(str, sep = ',') {
+function split(str, sep) {
     if (sep === null) {
         sep = ','
     }
 
     let result = []
-    if (sep === "") {
+    if (sep === '') {
         for (let i = 0; i < str.length; i++) {
             result.push(str[i])
         }
