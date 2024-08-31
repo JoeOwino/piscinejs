@@ -1,9 +1,9 @@
-const normal = /hi/i
+const normal = /hi/
 
-const begin = /^hi/i
+const begin = /^hi/
 
-const end = /hi$/i
+const end = /hi$/
 
 const beginEnd = /^hi$/
 
-console.log(end.test('hi'))
+console.log(!normal.test('Hi'))
