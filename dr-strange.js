@@ -23,3 +23,4 @@ function timeTravel(date) {
     return new Date(date.date.setHours(date.hour, date.minute, date.second));
 }
 
+console.log(Date.now()/(365*24*60*60*60))
