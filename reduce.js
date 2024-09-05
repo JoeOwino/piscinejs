@@ -1,6 +1,8 @@
 function fold(arr, f, acc) {
+    let i = 0
     for (let val of arr) {
         acc = f(acc, val, i, arr)
+        i++
     }
     return acc
 }
