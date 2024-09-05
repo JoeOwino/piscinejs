@@ -1,5 +1,5 @@
 function mult2(n) {
-    return (res) => x * res
+    return (res) => n * res
 }
 
 function add3(n) {
